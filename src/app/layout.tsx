@@ -16,17 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Dev Aryan Khare | Full Stack Developer & SIH 2025 Winner',
+  title: 'Dev Aryan Khare | Full Stack & Agentic AI Developer | SIH 2025 Winner',
   description:
-    'Official portfolio site of Dev Aryan Khare, B.Tech Computer Science student at IIIT Bhopal, SIH 2025 Winner, and open source developer building scalable digital products.',
+    'Official portfolio of Dev Aryan Khare, B.Tech CSE student at IIIT Bhopal, SIH 2025 Winner, and Full Stack & Generative AI engineer building scalable multi-agent platforms and digital products.',
   keywords: [
     'Dev Aryan Khare',
     'Full Stack Developer',
     'SIH 2025 Winner',
+    'Smart India Hackathon',
     'IIIT Bhopal',
+    'Agentic AI',
+    'LangGraph',
+    'Multi-Agent Systems',
     'Open Source Contributor',
     'React Developer',
-    'Next.js 15 Portfolio',
+    'Next.js Portfolio',
     'Software Engineer India',
   ],
   authors: [{ name: 'Dev Aryan Khare' }],

@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calendar, GitPullRequest, Star, CheckCircle2 } from 'lucide-react';
+import { Calendar, GitPullRequest, Star, CheckCircle2, Briefcase, Globe } from 'lucide-react';
 
 // Register ScrollTrigger helper plugin
 if (typeof window !== 'undefined') {
@@ -23,26 +23,46 @@ interface TimelineItem {
 const experiences: TimelineItem[] = [
   {
     id: 1,
-    role: 'Open Source Contributor',
-    organization: 'GirlScript Summer of Code 2025',
-    period: 'Summer 2025',
-    icon: <Star className="h-5 w-5" />,
+    role: 'Full Stack Developer Intern',
+    organization: 'UNIPREP',
+    period: 'Feb 2026 – April 2026',
+    icon: <Briefcase className="h-5 w-5" />,
     highlights: [
-      'Improved search performance by introducing optimized search algorithms.',
-      'Enhanced core React components, boosting accessibility and UI rendering speed.',
-      'Collaborated closely with maintainers and international contributors to review and merge pull requests.',
+      'Collaborated with a 5-member engineering team to enhance a CUET preparation platform through full-stack development and REST API integration.',
+      'Developed performant full-stack modules and optimized database queries to provide seamless exam preparation workflows.',
     ],
   },
   {
     id: 2,
+    role: 'Webmaster',
+    organization: 'IEEE Student Branch, IIIT Bhopal',
+    period: 'Nov 2025 – Sept 2026',
+    icon: <Globe className="h-5 w-5" />,
+    highlights: [
+      'Directed website management, digital presence, and event tech infrastructure for the IEEE Student Branch at IIIT Bhopal.',
+      'Designed responsive interfaces and maintained platform reliability for flagship campus tech symposiums.',
+    ],
+  },
+  {
+    id: 3,
     role: 'Supercontributor',
     organization: 'Hacktoberfest 2025',
-    period: 'October 2025',
+    period: 'Oct 2025 – Nov 2025',
     icon: <GitPullRequest className="h-5 w-5" />,
     highlights: [
-      'Successfully merged multiple high-impact pull requests in popular open-source repositories.',
-      'Developed core features, focusing on modern state management and API integration.',
-      'Contributed documentation improvements to assist onboarding for new contributors.',
+      'Delivered 6+ merged pull requests spanning new features, bug fixes, documentation, and repository maintenance.',
+      'Collaborated in production open-source ecosystems, standardizing component workflows and code quality.',
+    ],
+  },
+  {
+    id: 4,
+    role: 'Open Source Contributor',
+    organization: 'GirlScript Summer of Code 2025',
+    period: 'Jul 2025 – Aug 2025',
+    icon: <Star className="h-5 w-5" />,
+    highlights: [
+      'Improved search performance and UI reliability across 4+ repositories by enhancing 10+ React components.',
+      'Partnered closely with project maintainers to test, benchmark, and deploy modern reactive interfaces.',
     ],
   },
 ];

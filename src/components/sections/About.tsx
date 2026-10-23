@@ -102,30 +102,59 @@ export default function About() {
                   <GraduationCap className="text-accent-blue h-7 w-7" />
                   <span className="text-lg font-semibold text-zinc-200">Education & Background</span>
                 </div>
-                <h4 className="text-2xl font-bold text-white mb-4">
-                  B.Tech Computer Science Student
-                </h4>
-                <p className="text-zinc-400 leading-relaxed mb-4 text-base font-normal">
-                  I am currently pursuing my B.Tech in Computer Science and Engineering at the{' '}
-                  <span className="text-white font-semibold">Indian Institute of Information Technology (IIIT) Bhopal</span>. 
-                  My academic journey has built a strong foundation in data structures, algorithms, and system design.
+                
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                  <h4 className="text-xl sm:text-2xl font-bold text-white">
+                    B.Tech – Computer Science & Engineering
+                  </h4>
+                  <span className="inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/20 w-fit">
+                    Aug 2024 – May 2028
+                  </span>
+                </div>
+
+                <p className="text-zinc-300 font-semibold mb-3">
+                  Indian Institute of Information Technology (IIIT), Bhopal
                 </p>
-                <p className="text-zinc-400 leading-relaxed text-base font-normal">
-                  Passionate about Full Stack Development, Open Source contributions, and AI-powered applications. 
-                  I focus on writing high-performance, maintainable code and solving real-world challenges through 
-                  scalable engineering solutions.
+
+                <p className="text-zinc-400 leading-relaxed mb-6 text-sm font-normal">
+                  Building next-generation full stack applications, agentic AI workflows, and distributed systems. 
+                  Passionate about combining robust backend logic with responsive, real-time user experiences.
                 </p>
+
+                {/* Coursework from PDF */}
+                <div className="mb-4">
+                  <h5 className="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2.5">
+                    Coursework
+                  </h5>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      'Data Structures & Algorithms',
+                      'Object-Oriented Programming',
+                      'Artificial Intelligence & Machine Learning',
+                      'Advanced DBMS',
+                      'Software Project Engineering & Management',
+                      'Cryptography & Cyber Security',
+                    ].map((course) => (
+                      <span
+                        key={course}
+                        className="text-[11px] font-medium px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-zinc-300 hover:border-accent-blue/30 transition-colors"
+                      >
+                        {course}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
 
               {/* Taglines */}
-              <div className="border-t border-white/10 pt-6 mt-8 grid grid-cols-2 gap-4">
+              <div className="border-t border-white/10 pt-6 mt-6 grid grid-cols-2 gap-4">
                 <div>
                   <h5 className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Based in</h5>
                   <p className="text-sm font-semibold text-zinc-300">Bhopal, India</p>
                 </div>
                 <div>
                   <h5 className="text-xs text-zinc-500 font-semibold uppercase tracking-wider">Interest</h5>
-                  <p className="text-sm font-semibold text-zinc-300">Full Stack & AI Dev</p>
+                  <p className="text-sm font-semibold text-zinc-300">Full Stack & Agentic AI</p>
                 </div>
               </div>
             </motion.div>
@@ -137,25 +166,25 @@ export default function About() {
               icon={<Trophy className="h-6 w-6" />}
               targetNumber={1}
               suffix=""
-              title="SIH 2025 Winner"
+              title="SIH 2025 National Winner"
+            />
+            <StatCard
+              icon={<Star className="h-6 w-6" />}
+              targetNumber={1529}
+              suffix=""
+              title="CodeChef Peak Rating (2★)"
+            />
+            <StatCard
+              icon={<Rocket className="h-6 w-6" />}
+              targetNumber={490}
+              suffix="+"
+              title="SIH Teams Competed"
             />
             <StatCard
               icon={<Code2 className="h-6 w-6" />}
               targetNumber={324}
               suffix="+"
               title="GitHub Contributions"
-            />
-            <StatCard
-              icon={<Rocket className="h-6 w-6" />}
-              targetNumber={30}
-              suffix="+"
-              title="Repo "
-            />
-            <StatCard
-              icon={<Star className="h-6 w-6" />}
-              targetNumber={1470}
-              suffix=""
-              title="CodeChef Rating"
             />
           </div>
         </div>

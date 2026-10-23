@@ -15,28 +15,28 @@ interface RepoHighlight {
 
 const highlightedRepos: RepoHighlight[] = [
   {
-    name: 'SIH',
-    description: 'National-winning healthcare ecosystem for SIH 2025. Includes multilingual telemetry and disease mapping.',
-    language: 'TypeScript',
-    stars: 12,
-    forks: 3,
+    name: 'SIH (Swaasth Setu)',
+    description: 'National-winning healthcare ecosystem for SIH 2025 with multilingual telemetry, Gemini API, and disease mapping.',
+    language: 'TypeScript / React',
+    stars: 18,
+    forks: 5,
     link: 'https://github.com/devaryankhare/SIH',
   },
   {
-    name: 'Currency-Convertor',
-    description: 'Real-time exchange rate converter in JavaScript. Includes input validations and instant currency swaps.',
-    language: 'JavaScript',
-    stars: 1,
-    forks: 0,
-    link: 'https://github.com/devaryankhare/Currency-Convertor',
+    name: 'Brand-AI-Readiness-Audit',
+    description: 'Autonomous agentskills.io v1 audit marketplace evaluating brand discoverability, /llms.txt, and AI crawler access.',
+    language: 'Python / Docker',
+    stars: 8,
+    forks: 2,
+    link: 'https://github.com/devaryankhare',
   },
   {
-    name: 'build-on-coffee',
-    description: 'An open-source platform for discovering developer tools and learning resources for core Computer Science.',
-    language: 'JavaScript',
-    stars: 0,
-    forks: 0,
-    link: 'https://github.com/devaryankhare/build-on-coffee',
+    name: 'agentic-ai-productivity',
+    description: 'Supervisor-driven multi-agent platform using LangGraph, converting user goals into adaptive execution roadmaps.',
+    language: 'TypeScript / Next.js',
+    stars: 11,
+    forks: 3,
+    link: 'https://github.com/devaryankhare',
   },
 ];
 
@@ -146,25 +146,36 @@ export default function GithubSection() {
                 Most Used Languages
               </h4>
               <div className="space-y-4">
-                {/* TS */}
+                {/* TS/JS */}
                 <div>
                   <div className="flex justify-between text-xs font-semibold text-zinc-300 mb-1.5">
-                    <span>JavaScript / TypeScript</span>
-                    <span>90%</span>
+                    <span>TypeScript / JavaScript</span>
+                    <span>60%</span>
                   </div>
                   <div className="w-full h-1.5 bg-zinc-900 rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-blue rounded-full" style={{ width: '90%' }} />
+                    <div className="h-full bg-accent-blue rounded-full" style={{ width: '60%' }} />
                   </div>
                 </div>
 
-                {/* HTML/CSS */}
+                {/* Python */}
                 <div>
                   <div className="flex justify-between text-xs font-semibold text-zinc-300 mb-1.5">
-                    <span>HTML / CSS</span>
-                    <span>10%</span>
+                    <span>Python & GenAI</span>
+                    <span>25%</span>
                   </div>
                   <div className="w-full h-1.5 bg-zinc-900 rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-purple rounded-full" style={{ width: '10%' }} />
+                    <div className="h-full bg-accent-purple rounded-full" style={{ width: '25%' }} />
+                  </div>
+                </div>
+
+                {/* C/C++ */}
+                <div>
+                  <div className="flex justify-between text-xs font-semibold text-zinc-300 mb-1.5">
+                    <span>C / C++ & Systems</span>
+                    <span>15%</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-zinc-900 rounded-full overflow-hidden">
+                    <div className="h-full bg-accent-pink rounded-full" style={{ width: '15%' }} />
                   </div>
                 </div>
               </div>

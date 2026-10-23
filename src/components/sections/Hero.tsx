@@ -4,7 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Mail, ChevronDown, Terminal, Database, Shield, Cpu } from 'lucide-react';
 
-const words = ['Full Stack Developer', 'SIH 2025 Winner', 'Open Source Contributor'];
+const words = [
+  'Full Stack Developer',
+  'SIH 2025 Winner',
+  'Generative AI & Agentic Systems',
+  'Open Source Contributor',
+];
 
 export default function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

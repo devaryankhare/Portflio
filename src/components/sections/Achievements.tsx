@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Star, Target, Rocket, Award } from 'lucide-react';
+import { Trophy, Star, Target, Rocket, Award, Globe } from 'lucide-react';
 
 interface Achievement {
   id: number;
@@ -10,39 +10,49 @@ interface Achievement {
   subtitle: string;
   description: string;
   icon: React.ReactNode;
-  color: string; // Tailwind glow classes
+  color: string;
+  featured?: boolean;
 }
 
 const achievements: Achievement[] = [
   {
     id: 1,
-    title: 'Smart India Hackathon 2025 Winner',
-    subtitle: 'National Champion',
-    description: 'Secured the 1st Place National Trophy in the Healthcare division at SIH 2025, beating out thousands of teams nationwide for our project Swaasth Setu.',
+    title: 'Winner – Smart India Hackathon (SIH) 2025',
+    subtitle: 'National Winner • Healthcare Division',
+    description: 'Awarded National Winner among 490+ teams across India for our project Swaasth Setu, engineering a 4-layer health and workforce monitoring ecosystem with real-time multilingual translation and disease surveillance heatmaps.',
     icon: <Trophy className="h-6 w-6 text-yellow-400" />,
     color: 'hover:border-yellow-500/30 hover:shadow-yellow-500/5',
+    featured: true,
   },
   {
     id: 2,
-    title: 'CodeChef Rating 1470',
-    subtitle: 'Competitive Programming',
-    description: 'Achieved a rating of 1470 (3-Star Coder) on CodeChef. Solved numerous complex algorithmic problems in runtime-constrained environments.',
+    title: 'Top 160 in India – India-Singapore Hackathon',
+    subtitle: 'International Bilateral Hackathon',
+    description: 'Ranked among the Top 160 innovators nationwide in the prestigious international hackathon jointly organized by the governments of India and Singapore.',
+    icon: <Globe className="h-6 w-6 text-cyan-400" />,
+    color: 'hover:border-cyan-500/30 hover:shadow-cyan-500/5',
+  },
+  {
+    id: 3,
+    title: 'CodeChef 2-Star Coder (Peak Rating 1529)',
+    subtitle: 'Algorithmic Problem Solving',
+    description: 'Achieved a peak rating of 1529 as a 2-Star Coder on CodeChef, solving complex data structures and algorithmic challenges under tight constraints.',
     icon: <Star className="h-6 w-6 text-accent-blue" />,
     color: 'hover:border-accent-blue/30 hover:shadow-accent-blue/5',
   },
   {
-    id: 3,
-    title: 'Hackatron 2K25 Finalist',
-    subtitle: 'Top 10 Finalist Team',
-    description: 'Ranked in the top 10 finalists globally for developing a decentralized local-first resource coordination platform under intense 36-hour hackathon limits.',
+    id: 4,
+    title: 'Finalist – Hackatron 2K25',
+    subtitle: 'IIIT Gwalior 36-Hour Sprint',
+    description: 'Recognized as a grand finalist team in the 36-hour GitHub-powered innovation sprint hosted at the Indian Institute of Information Technology (IIIT) Gwalior.',
     icon: <Target className="h-6 w-6 text-accent-purple" />,
     color: 'hover:border-accent-purple/30 hover:shadow-accent-purple/5',
   },
   {
-    id: 4,
-    title: 'Smackathon 2K25 Finalist',
-    subtitle: 'Innovation Shortlist',
-    description: 'Recognized as a grand finalist for pitching and programming an AI-assisted developer workspace optimizer, competing against 500+ participants.',
+    id: 5,
+    title: 'Finalist – Smackathon 2K25',
+    subtitle: 'National-Level Hackathon (YCCE Nagpur)',
+    description: 'Selected as a grand finalist at Smackathon 2K25, a national-level hackathon at YCCE Nagpur, presenting scalable software solutions.',
     icon: <Rocket className="h-6 w-6 text-accent-pink" />,
     color: 'hover:border-accent-pink/30 hover:shadow-accent-pink/5',
   },
@@ -59,7 +69,7 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
@@ -74,6 +84,7 @@ export default function Achievements() {
       className="relative py-24 bg-[#0A0A0A] overflow-hidden px-4"
     >
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent-blue/5 rounded-full filter blur-[100px] pointer-events-none z-0" />
+      <div className="absolute top-10 right-10 w-96 h-96 bg-accent-purple/5 rounded-full filter blur-[100px] pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Section Header */}
@@ -92,22 +103,24 @@ export default function Achievements() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {achievements.map((ach) => (
             <motion.div
               key={ach.id}
               variants={cardVariants}
-              className={`glass-card p-6 sm:p-8 rounded-3xl border-white/5 flex gap-5 items-start transition-all duration-300 ${ach.color}`}
+              className={`glass-card p-6 sm:p-8 rounded-3xl border-white/5 flex gap-5 items-start transition-all duration-300 ${ach.color} ${
+                ach.featured ? 'md:col-span-2 border-yellow-500/20 bg-gradient-to-r from-yellow-500/[0.03] via-transparent to-accent-blue/[0.03]' : ''
+              }`}
             >
               {/* Icon Panel */}
-              <div className="p-3 rounded-2xl bg-white/5 shrink-0 border border-white/5">
+              <div className="p-3.5 rounded-2xl bg-white/5 shrink-0 border border-white/5">
                 {ach.icon}
               </div>
 
               {/* Text content */}
-              <div>
+              <div className="flex-1">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-1 block">
                   {ach.subtitle}
                 </span>
@@ -126,7 +139,7 @@ export default function Achievements() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/5 text-zinc-300 text-xs font-medium">
             <Award className="h-4 w-4 text-accent-blue animate-pulse" />
-            Consistently striving for excellence in software development.
+            Consistently striving for excellence across national competitions, hackathons, and algorithms.
           </div>
         </div>
       </div>

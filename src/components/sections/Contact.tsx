@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Mail, Github, Linkedin, Terminal } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Terminal } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -32,21 +32,51 @@ export default function Contact() {
             Whether you have an interesting project idea, open-source collaboration, internship opportunities, or just want to say hi, feel free to reach out. I'll get back to you as soon as possible.
           </p>
 
-          {/* Direct Mail info */}
-          <div className="inline-flex flex-col items-center gap-3 text-zinc-300 mb-12 group">
-            <div className="p-3.5 rounded-full bg-white/5 border border-white/5 text-accent-blue group-hover:bg-accent-blue/15 group-hover:scale-110 transition-all duration-300">
-              <Mail size={24} />
-            </div>
-            <div>
-              <span className="block text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-1">
-                Direct Email
+          {/* Direct Contact info cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+            {/* Email */}
+            <div className="glass-card p-5 rounded-2xl border-white/5 flex flex-col items-center text-center group hover:border-accent-blue/30 transition-all">
+              <div className="p-3 rounded-full bg-white/5 border border-white/5 text-accent-blue mb-3 group-hover:scale-110 transition-transform">
+                <Mail size={20} />
+              </div>
+              <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-1">
+                Email
               </span>
               <a
                 href="mailto:devaryankhare@gmail.com"
-                className="text-lg sm:text-xl font-bold text-white hover:text-accent-blue transition-colors"
+                className="text-xs sm:text-sm font-semibold text-white hover:text-accent-blue transition-colors break-all"
               >
                 devaryankhare@gmail.com
               </a>
+            </div>
+
+            {/* Phone */}
+            <div className="glass-card p-5 rounded-2xl border-white/5 flex flex-col items-center text-center group hover:border-accent-purple/30 transition-all">
+              <div className="p-3 rounded-full bg-white/5 border border-white/5 text-accent-purple mb-3 group-hover:scale-110 transition-transform">
+                <Phone size={20} />
+              </div>
+              <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-1">
+                Phone
+              </span>
+              <a
+                href="tel:+918827790621"
+                className="text-xs sm:text-sm font-semibold text-white hover:text-accent-purple transition-colors"
+              >
+                +91 8827790621
+              </a>
+            </div>
+
+            {/* Location */}
+            <div className="glass-card p-5 rounded-2xl border-white/5 flex flex-col items-center text-center group hover:border-accent-pink/30 transition-all">
+              <div className="p-3 rounded-full bg-white/5 border border-white/5 text-accent-pink mb-3 group-hover:scale-110 transition-transform">
+                <MapPin size={20} />
+              </div>
+              <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider mb-1">
+                Location
+              </span>
+              <span className="text-xs sm:text-sm font-semibold text-white">
+                Bhopal, India
+              </span>
             </div>
           </div>
 
